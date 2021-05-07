@@ -1,0 +1,20 @@
+II
+
+API: https://ii-a5c.herokuapp.com/api
+
+MARIO: https://ii-a5c.herokuapp.com/api/mario
+FDP: https://ii-a5c.herokuapp.com/api/fdp
+
+Transform to do: https://ii-a5c.herokuapp.com/api/transform
+Transform doing: https://ii-a5c.herokuapp.com/api/transformDOING
+Transform done: https://ii-a5c.herokuapp.com/api/transformDONE
+
+Unload to do: https://ii-a5c.herokuapp.com/api/unload
+Unload done: https://ii-a5c.herokuapp.com/api/unloadDONE
+
+Warehouse: https://ii-a5c.herokuapp.com/api/warehouse
+
+Machines Statistics: https://ii-a5c.herokuapp.com/api/machines
+Pushers Statistics: https://ii-a5c.herokuapp.com/api/pushers
+
+Excepted Transformation Time: https://ii-a5c.herokuapp.com/api/exceptedTT

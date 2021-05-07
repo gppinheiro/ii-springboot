@@ -267,4 +267,19 @@ public class dbConnect {
         return res;
     }
 
+    public void addTransform(Transform tf) throws SQLException {
+        PreparedStatement s = this.conn.prepareStatement("INSERT INTO ii.\"Transform\" VALUES (?,?,?,?,?,?,?,?,?,?);");
+        s.setInt(1,tf.getOrderNumber());
+        s.setInt(2,tf.getFrom());
+        s.setInt(3,tf.getTo());
+        s.setInt(4,tf.getQuantity());
+        s.setInt(5,tf.getTime());
+        s.setInt(6,tf.getMaxDelay());
+        s.setInt(7,tf.getPenalty());
+        s.setTimestamp(8,new Timestamp(System.currentTimeMillis()));
+        s.setInt(9,0);
+        s.setInt(10,0);
+        s.executeUpdate();
+    }
+
 }

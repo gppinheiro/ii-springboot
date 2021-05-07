@@ -1,6 +1,7 @@
 package com.a5c;
 
 import com.a5c.data.Transform;
+import com.a5c.data.Unload;
 import com.a5c.db.dbConnect;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -86,7 +87,7 @@ public class ShowFabric {
         return db.getExcepted();
     }
 
-    @RequestMapping("addTransform/{od}/{from}/{to}/{quant}//{md}//{pen}")
+    @RequestMapping("addTransform/{od}/{from}/{to}/{quant}/{md}//{pen}")
     public String addTransform(@PathVariable int od, @PathVariable int from, @PathVariable int to, @PathVariable int quant, @PathVariable int md, @PathVariable int pen) {
         try {
             db.addTransform(new Transform(od,from,to,quant,0,md,pen));
@@ -94,6 +95,16 @@ public class ShowFabric {
             throwables.printStackTrace();
         }
         return "Added to transform's list TO DO.";
+    }
+
+    @RequestMapping("addUnload/{od}/{piece}/{dest}/{quant}")
+    public String addUnload(@PathVariable int od, @PathVariable int piece, @PathVariable int dest, @PathVariable int quant) {
+        try {
+            db.addUnload(new Unload(od,piece,dest,quant));
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return "Added to unload's list TO DO.";
     }
 
 }

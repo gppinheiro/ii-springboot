@@ -282,4 +282,14 @@ public class dbConnect {
         s.executeUpdate();
     }
 
+    public void addUnload(Unload un) throws SQLException {
+        PreparedStatement s = this.conn.prepareStatement("INSERT INTO ii.\"Unload\" VALUES (?,?,?,?,?);");
+        s.setInt(1,un.getOrderNumber());
+        s.setInt(2,un.getType());
+        s.setInt(3,un.getDestination());
+        s.setInt(4,un.getQuantity());
+        s.setTimestamp(5,new Timestamp(System.currentTimeMillis()));
+        s.executeUpdate();
+    }
+
 }

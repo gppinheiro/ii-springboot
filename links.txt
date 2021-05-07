@@ -9,6 +9,8 @@ Transform to do: https://ii-a5c.herokuapp.com/api/transform
 Transform doing: https://ii-a5c.herokuapp.com/api/transformDOING
 Transform done: https://ii-a5c.herokuapp.com/api/transformDONE
 
+Add Transform: https://ii-a5c.herokuapp.com/api/addTransform/ordernumber/from/to/quantity/maxdelay/penalty
+
 Unload to do: https://ii-a5c.herokuapp.com/api/unload
 Unload done: https://ii-a5c.herokuapp.com/api/unloadDONE
 
